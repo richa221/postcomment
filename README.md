@@ -7,7 +7,7 @@ To make api call use app-id=6099590c47e85e0ee9b5d38f in your request header
 API to get User Details
 https://dummyapi.io/data/api/user/0F8JIqi4zwvb77FGz6Wt
 
-API got all posts list 
+API get all posts list 
 https://dummyapi.io/data/api/post?limit=10
 
 
