@@ -1,0 +1,10 @@
+*{
+    margin: opx;
+    padding: 0px;
+}
+.col-md-4{
+    padding: 10px;
+}
+.card{
+    background-color: rgb(248, 212, 7);
+}

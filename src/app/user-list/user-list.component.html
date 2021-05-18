@@ -2,16 +2,18 @@
 <div class="row row-cols-2 row-cols-md-6 g-4">
     <div class="col"  *ngFor ="let user of userlist">
       <div class="card h-100">
-        <img src="{{user.picture}}" class="card-img-top" alt="...">
+        <img src="{{user.picture}}" class="card-img-top" alt="userimg">
         <div class="card-body">
-          <h5 class="card-title">{{user.id}}</h5>
-          <h5 class="card-title">{{user.title}}. {{user.firstName}}</h5>
-          <p class="card-title">{{user.email}}</p>    
+          <h5 class="card-title">{{user?.id}}</h5>
+          <h5 class="card-title">{{user?.title}}. {{user?.firstName}}</h5>
+          <p class="card-title">{{user?.email}}</p> 
+          
         </div>
         <div>
-            <a class="nav-link" routerLink="userprofile" routerLinkActive="active">Full User Profile</a>
+            <a class="nav-link"  routerLink=""  (click)="getid(user.id)">Full User Profile</a>
             <a class="nav-link"  routerLink="postlist" routerLinkActive="active">Posts List</a> 
           </div>
       </div>
     </div>
+    
     

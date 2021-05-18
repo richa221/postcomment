@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../services/userservice.service';
-
+import {  Router } from '@angular/router';
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -8,13 +8,15 @@ import { UserserviceService } from '../services/userservice.service';
 })
 export class UserListComponent implements OnInit {
   userlist :any[]=[];
- constructor(private userservice:UserserviceService) { }
-  //constructor() { }
-  ngOnInit(): void {
-this.userservice.getuser().subscribe((result: any )=>{
-  console.log( "result",result);
+constructor(private userservice:UserserviceService , private router :Router) { }
+ngOnInit(): void {
+  this.userservice.getuser().subscribe((result: any )=>{
   this.userlist = result.data
-  console.log('collection ',this.userlist);
+  
 })
    }
+   id :any;
+getid(id :any){
+    this.router.navigate(['/userprofile',id]);
+  }
 }

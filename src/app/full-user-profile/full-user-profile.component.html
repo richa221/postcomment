@@ -1,21 +1,23 @@
 <h1>User Details</h1>
-<div class="card mb-3 text-center text-lg-left">
+<div class="card mb-3  ">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="..." alt="...">
+        <img src="{{userdetails?.picture}}" alt="..." style="width: 70%; height: 100%;">
       </div>
       <div class="col-md-4">
-        <b>name</b><br>
-        <b>Gender:</b><br>
-        <b>Date Of Birth:</b><br>
-        <b>Registor Date: </b><br><br>
-        <b>Email:</b><br>
-        <b>Phone:</b><br>
+        <p>{{userdetails?.id}}</p>
+        <b>{{userdetails?.title}}.{{userdetails?.firstName}}</b><br><br>
+        <p><b>Gender:</b>{{userdetails?.gender}}</p>
+        <p><b>Date Of Birth:</b>{{userdetails?.dateOfBirth}}</p>
+        <p><b>Registor Date: </b>{{userdetails?.registerDate }}</p><br><br>
+        <p><b>Email:</b>{{userdetails?.email}}</p>
+        <p><b>Phone:</b>{{userdetails?.phone}}</p><br>
       </div>
       <div class="col-md-4">
         <div class="card-body">
-         <b>Address</b><br>
-         <p> address 111</p>
+         <p><b>Address</b><br>{{userdetails?.location.country}},{{userdetails?.location.state}},
+          {{userdetails?.location.city}}</p>
+          <p>{{userdetails?.location.street}}</p>
         </div>
         <div>
             <img src="..." alt="...">  

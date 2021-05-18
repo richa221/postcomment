@@ -1,1 +1,24 @@
-
+<div class="row row-cols-2 row-cols-md-4 g-4 ">
+    <div class="col"  *ngFor ="let post of postlist" >
+      <div class="card ">
+        <p class="card-title"><b>{{post?.owner.firstName}} {{post?.owner.lastName}}</b></p>
+        <p class="card-title">{{post?.owner.email}}</p>
+        <img src="{{post?.image}}" class="card-img-top" alt="postimg">
+        <div class="card-body">
+          <div id="outer">
+            <div class="inner"><p class="badge">{{post?.tags[0]}}</p></div>
+            <div class="inner"><p class="badge">{{post?.tags[1]}}</p></div>
+            <div class="inner"><p class="badge">{{post?.tags[2]}}</p></div>
+          </div>
+          <h5 class="card-title">{{post?.text}}</h5>
+          <a style="color: rgb(248, 47, 188);" href="#">{{post?.link}}</a>   
+        </div>
+        <div>
+            <a class="nav-link" routerLink="" routerLinkActive="active">Get Post Comments</a>
+            <a class="nav-link"  routerLink="" routerLinkActive="active">Get Owner Profile</a> 
+          </div>
+          
+      </div>
+    </div>
+    </div>
+    
