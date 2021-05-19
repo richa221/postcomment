@@ -11,7 +11,7 @@
         </div>
         <div>
             <a class="nav-link"  routerLink=""  (click)="getid(user.id)">Full User Profile</a>
-            <a class="nav-link"  routerLink="postlist" routerLinkActive="active">Posts List</a> 
+            <a class="nav-link"  routerLink="postlist" (click)="getPostId(user.id)" routerLinkActive="active">Posts List</a> 
           </div>
       </div>
     </div>

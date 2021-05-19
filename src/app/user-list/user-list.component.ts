@@ -19,4 +19,7 @@ ngOnInit(): void {
 getid(id :any){
     this.router.navigate(['/userprofile',id]);
   }
+  getPostId(id:any){
+    this.router.navigate(['/userpost',id]);
+  }
 }

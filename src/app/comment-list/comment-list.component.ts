@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserserviceService } from '../services/userservice.service';
-import {  Router } from '@angular/router';
+
 @Component({
-  selector: 'app-postlist',
-  templateUrl: './postlist.component.html',
-  styleUrls: ['./postlist.component.css']
+  selector: 'app-comment-list',
+  templateUrl: './comment-list.component.html',
+  styleUrls: ['./comment-list.component.css']
 })
-export class PostlistComponent implements OnInit {
+export class CommentListComponent implements OnInit {
   postlist :any[]=[]
   constructor(private userservice:UserserviceService,private router:Router) { }
   ngOnInit(): void {
@@ -16,9 +17,5 @@ export class PostlistComponent implements OnInit {
       
     })
   }
-  id :any;
-  getid(id :any){
-      this.router.navigate(['/userprofile',id]);
-    }
 
 }

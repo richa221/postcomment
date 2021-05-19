@@ -27,7 +27,13 @@ export class UserserviceService {
     httpHeaders = httpHeaders.append('app-id','6099590c47e85e0ee9b5d38f');
     let options = {headers:httpHeaders};
     return this.http.get(url ,options);
-    
+  }
+  getUserPosts(id:any){
+    let url =`${"https://dummyapi.io/data/api/user"}/${id}/post?limit=10"`;
+    let httpHeaders = new HttpHeaders();
+    httpHeaders = httpHeaders.append('app-id','6099590c47e85e0ee9b5d38f');
+    let options = {headers:httpHeaders};
+    return this.http.get(url ,options);
   }
 
 }

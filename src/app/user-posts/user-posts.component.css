@@ -1,0 +1,35 @@
+
+.example-header-image{
+    border-radius: 50%;
+    width: 40px;
+  }
+  mat-card-title{
+    margin-left: 23px;
+  }
+  
+  #outer
+  {   
+      width:100%;
+      padding: 3px;
+  }
+  .group{
+    display: flex;
+    flex-direction: row;
+  }
+  .inner
+  {   margin-right: 12px;
+      display: inline-block; 
+      align-items: center;  
+  }
+  .card{
+    background-color: rgb(248, 212, 7);
+    padding: 10PX;
+  }
+  .nav-link {color: rgb(240, 24, 143);}
+  .badge{
+    border-radius: 15px;
+    background-color: rgb(202, 52, 102);
+    color: #f0f8ff;
+  }
+  
+  

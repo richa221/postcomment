@@ -9,8 +9,11 @@ import { FullUserProfileComponent } from './full-user-profile/full-user-profile.
 import { PostlistComponent } from './postlist/postlist.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { UserPostsComponent } from './user-posts/user-posts.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,9 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     UserListComponent,
     FullUserProfileComponent,
-    PostlistComponent
+    PostlistComponent,
+    UserPostsComponent,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

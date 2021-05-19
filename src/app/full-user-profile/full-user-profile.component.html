@@ -8,8 +8,8 @@
         <p>{{userdetails?.id}}</p>
         <b>{{userdetails?.title}}.{{userdetails?.firstName}}</b><br><br>
         <p><b>Gender:</b>{{userdetails?.gender}}</p>
-        <p><b>Date Of Birth:</b>{{userdetails?.dateOfBirth}}</p>
-        <p><b>Registor Date: </b>{{userdetails?.registerDate }}</p><br><br>
+        <p><b>Date Of Birth: </b>{{userdetails?.dateOfBirth |date:'MMM d, y'}}</p>
+        <p><b>Registor Date: </b>{{userdetails?.registerDate |date:'MMM d, y' }}</p><br><br>
         <p><b>Email:</b>{{userdetails?.email}}</p>
         <p><b>Phone:</b>{{userdetails?.phone}}</p><br>
       </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserserviceService } from '../services/userservice.service';
-import { Router, ActivatedRoute, ParamMap  } from '@angular/router';
+import { Router, ActivatedRoute  } from '@angular/router';
 @Component({
   selector: 'app-full-user-profile',
   templateUrl: './full-user-profile.component.html',

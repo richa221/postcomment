@@ -1,5 +1,5 @@
-<div class="row  ">
-    <div class="col-sm-3"  *ngFor ="let post of postlist" >
+<div class="row">
+    <div class="col-sm-4"  *ngFor ="let post of postlist" >
       <div class="card ">
         <mat-card-header>
           <mat-title-group>
@@ -25,7 +25,7 @@
               favorite
               </span>
               <span style="margin-top: 3px; margin-left: 5px;">{{post.likes}} &ensp;Likes</span >
-                <span style="margin-top: 3px; margin-left: 80px;">{{post.publishDate|date:'MMM d, y, h:mm:ss'}}</span >
+                <span style="margin-top: 3px; margin-left: 60px;">{{post.publishDate|date:'MMM d, y, h:mm:ss'}}</span >
           </div>  
         </div>
        
