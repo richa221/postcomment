@@ -1,23 +1,20 @@
 <div class="row g-4">
-    <div class="col-sm-3"  *ngFor ="let post of postlist" >
+    <div class="col-sm-3"  *ngFor ="let comment of commentlist" >
       <div class="card ">
         <mat-card-header>
           <mat-title-group>
          <mat-icon > 
-          <img   class="example-header-image" src="{{post?.owner.picture}}" alt="icon">
+          <img   class="example-header-image" src="{{comment?.owner.picture}}" alt="icon">
          </mat-icon>
-          <mat-card-title style="margin-left: 23px;">{{post?.owner.firstName}}</mat-card-title>
-          <mat-card-subtitle> {{post?.owner.lastName}}</mat-card-subtitle>
-          <p style="margin-left: 48px;">{{post.publishDate|date:'MMM d, y, h:mm:ss'}}</p>
+          <mat-card-title style="margin-left: 23px;">{{comment?.owner.firstName}}</mat-card-title>
+          <mat-card-subtitle> {{comment?.owner.lastName}}</mat-card-subtitle>
+          <p style="margin-left: 48px;">{{comment.publishDate|date:'MMM d, y, h:mm:ss'}}</p>
+          <hr class="solid">
         </mat-title-group>
         </mat-card-header>
         <div class="card-body">
           <div class="group">
-            <span class="material-icons" style="color: rgb(14, 62, 207);"  >
-              favorite
-              </span>
-              <span style="margin-top: 3px; margin-left: 5px;">{{post.likes}} &ensp;Likes</span >
-                <span style="margin-top: 3px; margin-left: 80px;">{{post.publishDate|date:'MMM d, y, h:mm:ss'}}</span >
+                 <span style="margin-top: 3px; ">{{comment.message}}</span >
           </div>  
         </div>  
       </div>

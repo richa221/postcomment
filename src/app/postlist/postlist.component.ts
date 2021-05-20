@@ -12,7 +12,7 @@ export class PostlistComponent implements OnInit {
   ngOnInit(): void {
     this.userservice.getPostsList().subscribe((result: any )=>{
       this.postlist = result.data
-      console.log('post list',this.postlist);
+      // console.log('post list',this.postlist);
       
     })
   }

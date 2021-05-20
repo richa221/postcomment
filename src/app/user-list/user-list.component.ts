@@ -12,7 +12,7 @@ constructor(private userservice:UserserviceService , private router :Router) { }
 ngOnInit(): void {
   this.userservice.getuser().subscribe((result: any )=>{
   this.userlist = result.data
-  
+  // console.log('userrr list',this.userlist);
 })
    }
    id :any;

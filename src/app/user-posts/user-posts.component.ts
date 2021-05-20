@@ -15,7 +15,7 @@ export class UserPostsComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.userservice.getUserPosts(id).subscribe((result: any )=>{
       this.postlist = result.data
-      console.log('user post',this.postlist);
+      // console.log('user post list',this.postlist);
       
     })
   }

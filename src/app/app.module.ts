@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { UserPostsComponent } from './user-posts/user-posts.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { TagListComponent } from './tag-list/tag-list.component';
+import { PostByTagComponent } from './post-by-tag/post-by-tag.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     FullUserProfileComponent,
     PostlistComponent,
     UserPostsComponent,
-    CommentListComponent
+    CommentListComponent,
+    TagListComponent,
+    PostByTagComponent
   ],
   imports: [
     BrowserModule,

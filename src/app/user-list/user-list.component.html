@@ -1,13 +1,13 @@
 <h1>Users List</h1>
 <div class="row row-cols-2 row-cols-md-6 g-4">
     <div class="col"  *ngFor ="let user of userlist">
-      <div class="card h-100">
+      <div class="card ">
         <img src="{{user.picture}}" class="card-img-top" alt="userimg">
         <div class="card-body">
           <h5 class="card-title">{{user?.id}}</h5>
-          <h5 class="card-title">{{user?.title}}. {{user?.firstName}}</h5>
+          <h3 class="card-title"><b>{{user?.title}}. {{user?.firstName}}</b></h3>
           <p class="card-title">{{user?.email}}</p> 
-          
+          <hr class="solid">
         </div>
         <div>
             <a class="nav-link"  routerLink=""  (click)="getid(user.id)">Full User Profile</a>

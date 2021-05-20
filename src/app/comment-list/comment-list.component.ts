@@ -8,12 +8,12 @@ import { UserserviceService } from '../services/userservice.service';
   styleUrls: ['./comment-list.component.css']
 })
 export class CommentListComponent implements OnInit {
-  postlist :any[]=[]
+  commentlist :any[]=[]
   constructor(private userservice:UserserviceService,private router:Router) { }
   ngOnInit(): void {
-    this.userservice.getPostsList().subscribe((result: any )=>{
-      this.postlist = result.data
-      console.log('post list',this.postlist);
+    this.userservice.getusercomment().subscribe((result: any )=>{
+      this.commentlist = result.data
+      console.log('comment list',this.commentlist);
       
     })
   }
