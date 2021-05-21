@@ -12,13 +12,16 @@ export class PostlistComponent implements OnInit {
   ngOnInit(): void {
     this.userservice.getPostsList().subscribe((result: any )=>{
       this.postlist = result.data
-      // console.log('post list',this.postlist);
+      console.log('post list',this.postlist);
       
     })
   }
   id :any;
   getid(id :any){
       this.router.navigate(['/userprofile',id]);
+    }
+    getPostId(postId:any){
+      this.router.navigate(['/commentlist',postId]); 
     }
 
 }

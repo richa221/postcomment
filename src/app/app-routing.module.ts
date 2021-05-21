@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'userprofile/:id', component:FullUserProfileComponent},
   {path:'postlist', component:PostlistComponent},
   {path:'userpost/:id', component:UserPostsComponent},
-  {path:'commentlist', component:CommentListComponent},
+  {path:'commentlist/:id', component:CommentListComponent},
   {path:'taglist', component:TagListComponent},
   {path:'postbytag/:id', component:PostByTagComponent}
 

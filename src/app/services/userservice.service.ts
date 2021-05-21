@@ -35,8 +35,8 @@ export class UserserviceService {
     let options = {headers:httpHeaders};
     return this.http.get(url ,options);
   }
-  getusercomment(){
-    let url ="https://dummyapi.io/data/api/post/SFAt3mJK0qu4QOd9LgSX/comment?limit=10";
+  getusercomment(postId :any){
+    let url =`${"https://dummyapi.io/data/api/post"}/${postId}/comment?limit=10"`;
     let httpHeaders = new HttpHeaders();
     httpHeaders = httpHeaders.append('app-id','6099590c47e85e0ee9b5d38f');
     let options = {headers:httpHeaders};

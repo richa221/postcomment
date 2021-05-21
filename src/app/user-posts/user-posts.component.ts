@@ -23,5 +23,8 @@ export class UserPostsComponent implements OnInit {
   getid(id :any){
       this.router.navigate(['/userprofile',id]);
     }
+    getPostId(postId:any){
+      this.router.navigate(['/commentlist',postId]); 
+    }
 
 }

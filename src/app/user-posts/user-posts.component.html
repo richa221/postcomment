@@ -32,7 +32,7 @@
           <hr class="solid"> 
         </div>
         <div>
-            <a class="nav-link" routerLink=""  routerLinkActive="active">Get Post Comments</a>
+            <a class="nav-link" routerLink="" (click)="getPostId(post.id)" routerLinkActive="active">Get Post Comments</a>
             <a class="nav-link"  routerLink=""  (click)="getid(post.owner.id)" routerLinkActive="active">Get Owner Profile</a> 
           </div>
           

@@ -11,7 +11,7 @@ export class PostByTagComponent implements OnInit {
   posttag :any[]=[];
   constructor(private userservice:UserserviceService , private router :Router,
     private route:ActivatedRoute) { }
-    tagname :string
+    tagname :string;
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => { 
       this.tagname = params.get('id'); 
