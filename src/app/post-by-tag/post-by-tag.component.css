@@ -25,7 +25,9 @@
   }
   .card{
     background-color: rgb(248, 212, 7);
-    padding: 10PX;
+    padding: 10px;
+    height: 660px;
+
   }
   .nav-link {color: rgb(240, 24, 143);}
   .badge{

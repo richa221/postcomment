@@ -1,5 +1,5 @@
-<div class="row  ">
-    <div class="col-sm-3"  *ngFor ="let post of postlist" >
+<div class="row  row-cols-2 row-cols-md-4 g-3  ">
+    <div class="col"  *ngFor ="let post of postlist" >
       <div class="card ">
         <mat-card-header>
           <mat-title-group>
@@ -12,7 +12,7 @@
         </mat-title-group>
         </mat-card-header>
          <hr class="solid"> 
-        <img src="{{post?.image}}" class="card-img-top" alt="postimg">
+        <img src="{{post?.image}}" class="card-img-top" alt="postimg" height="350vh">
         <div class="card-body">
           <div id="outer">
             <div class="inner"><p class="badge">{{post?.tags[0]}}</p></div>
@@ -32,8 +32,8 @@
           <hr class="solid">  
         </div>
         <div>
-            <a class="nav-link" routerLink="" (click)="getPostId(post.id)" routerLinkActive="active">Get Post Comments</a>
-            <a class="nav-link"  routerLink=""  (click)="getid(post.owner.id)" routerLinkActive="active">Get Owner Profile</a> 
+            <a class="nav-link" routerLink="commentlist" (click)="getPostId(post.id)" routerLinkActive="active">Get Post Comments</a>
+            <a class="nav-link"  routerLink="userprofile"  (click)="getid(post.owner.id)" routerLinkActive="active">Get Owner Profile</a> 
           </div>
           
       </div>
