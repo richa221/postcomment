@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +38,11 @@ import { PostByTagComponent } from './post-by-tag/post-by-tag.component';
     NoopAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDZ9jkWMehRwsN90SQnCA8BJxG1crbHgIY',
+    
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,7 +20,25 @@
           <p>{{userdetails?.location.street}}</p>
         </div>
         <div>
-            <img src="..." alt="...">  
+        <agm-map 
+        [latitude]="userLat" 
+        [longitude]="userLng" 
+        [zoom]="zoom"
+        [disableDefaultUI]="true" 
+        [clickableIcons]="true"
+        [disableDoubleClickZoom]="false"
+        [draggableCursor]="false"
+        [draggable]="false"
+        [maxZoom]="8"
+        [usePanning]="false"
+        [mapDraggable]="false">
+          <agm-marker 
+          [latitude]="userLat" 
+          [longitude]="userLng"
+          [markerDraggable]="false"
+         
+          ></agm-marker>
+        </agm-map>
         </div>
       </div>
     </div>
