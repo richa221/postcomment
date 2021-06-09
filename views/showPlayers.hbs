@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players data</title>
+   <link rel="stylesheet" href="../views/showPlayers.css"> </head>
+</head>
+<body>
+    
+  <table class="table">
+    <tr>
+      <th>Player Id</th>
+      <th >Player Name</th>
+      <th > Player wins</th>
+    </tr>
+    {{#each items}}
+    <tr>
+      <td>{{this.user_id}}</td>
+      <td>{{ this.username }} </td>
+      <td>{{ this.userwin  }} </td>
+    </tr>
+    {{/each}}
+</table>
+</body>
+</html>
