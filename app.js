@@ -15,29 +15,22 @@ router.get("/", function(_req, res) {
 });
 app.use(express.static("./"));
 app.use(bodyParser.json());
+client.connect();
 // eslint-disable-next-line no-unused-vars
-app.post("/data", function(req, res) {
+router.post("/data", async(req, res)=> {
     var p1 = req.body.param1;
     var w1 = req.body.param3;
     var p2 = req.body.param2;
     var w2 = req.body.param4;
-    const createUser = (async() => {
-        await client.connect();
-        client.query(`INSERT INTO users(username,userwin) VALUES('${p1}',${w1}),('${p2}',${w2})`, (err) => {
-            if(err)
-                console.error(err);
-            res.redirect("users");
-            console.log( "Data insert successful");
-            client.end();
-           
-        });
-        
+    await client.query(`INSERT INTO users(username,userwin) VALUES('${p1}',${w1}),('${p2}',${w2})`, (err) => {
+        if(err)
+            console.error(err);
+        return res.status(200).render("showPlayers.hbs");   
     });
-    createUser();
+        
 });
-router.get("/users",(req,res)=>{
-    client.connect();
-    client.query("select * from users", (err, rows) => {
+router.get("/players",async(req,res)=>{
+    await client.query("select * from users", (err, rows) => {
         if(err) throw err;
         res.render("showPlayers.hbs",{items:rows.rows});
     });
@@ -46,3 +39,4 @@ app.use("/", router);
 app.listen(port, () => {
     console.log(`app listing port ${port}`);
 });
+module.exports=app;
