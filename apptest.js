@@ -3,7 +3,7 @@ let chai = require("chai");
 let chaiHttp = require("chai-http");
 chai.should();
 chai.use(chaiHttp);
-var app = require("./app.js");
+var app = require("./src/app.js");
 describe("Test case for get api",()=>{
     it("should return status 200 ", function(done) {
         chai.request(app)
@@ -26,5 +26,6 @@ describe("get  player", () => {
             });
     });
 });
+    
 
 

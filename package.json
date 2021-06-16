@@ -4,7 +4,7 @@
   "description": "express js project",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node src/app.js",
     "lint": "eslint",
     "test": "mocha apptest.js"
   },

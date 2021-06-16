@@ -58,10 +58,10 @@ function sendData() {
     var p2win = document.getElementById("btn2").innerText;
     var xhr = new XMLHttpRequest();
     var data = {
-        param1: player1,
-        param2: player2,
-        param3: p1win,
-        param4: p2win 
+        player1Name: player1,
+        player2Name: player2,
+        player1Win: p1win,
+        player2Win: p2win 
     };
     xhr.open("POST", "/data");
     xhr.setRequestHeader("Content-Type", "application/json");

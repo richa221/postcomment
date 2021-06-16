@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="../views/index.css"> </head>
+	<link rel="stylesheet" href="../public/index.css"> </head>
 
 <body>
 	<div class="container">
@@ -20,7 +20,7 @@
 				<button type="button" onclick="show()" id="submit">Continue</button>
 			</div>
 		</form>
-		<form id="form2" style="display: none" >
+		<form id="form2" action="/players" style="display: none" >
 			<div>
 				<h3 id="p1"></h3>
 				<button type="button" id="addbtn" onClick="btn1()">Add win</button>
@@ -36,7 +36,7 @@
 			<button class="savebtn" onclick="sendData()">Save Game</button>
 		</form>
 	</div>
-	<script src="../views/index.js"></script>
+	<script src="../public/index.js"></script>
 </body>
 
 </html>
